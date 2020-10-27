@@ -6,7 +6,7 @@ const Discord = require("discord.js"),
     TelegramBot = require('node-telegram-bot-api'),
     discordChat = [],
     bans = "lagz-sr"
-    bot = new TelegramBot(`1278792395:AAHk8mFilPMfV70UQXg4RNGXwxdZxBgbyQ4`, { polling: true });
+    bot = new TelegramBot(`TOKEN`, { polling: true });
     admins = "149521299562037249";
 
 let asTable = require('as-table').configure({ delimiter: ' | ' }), id = 0, who = "";
@@ -753,7 +753,7 @@ client.on("message", async message => {
     }
 });
 
-client.login(`NDcyMTY5NjAyODgxNjgzNDY2.W1pMNQ.QQPmWbkREqBy9TqFQl7FWgEzDMg`);
+client.login(`TOKEN`);
 
 async function download(url) {
     const ppath = path.resolve(__dirname, `game.txt`);
