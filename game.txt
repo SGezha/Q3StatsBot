@@ -1,0 +1,103 @@
+
+
+Accuracy info for: CTPAHA*COBETOB
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+Shotgun     :   22.7    5/22       1      0      0     0
+R.Launcher  :   29.5   13/44       2      4      0     0
+LightningGun:   35.0  150/428      4      6      0     0
+Railgun     :   46.6   14/30       1      3      0     0
+
+Damage Given: 3418   Armor Taken : 125 (1 RA)
+Damage Recvd: 4080   Health Taken: 60
+
+Accuracy info for: [420]chapo
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+Shotgun     :                      0      3      0     0
+G.Launcher  :    0.0    0/4        0      0      0     0
+R.Launcher  :   24.4   12/49       2      1      0     0
+LightningGun:   25.2   88/349      4      0      0     0
+Railgun     :   40.0   14/35       5      3      0     0
+
+Damage Given: 3091   Armor Taken : 480 (5 YA, 2 RA)
+Damage Recvd: 2951   Health Taken: 200 (1 MH)
+
+Accuracy info for: HTF*Loki
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+Shotgun     :   30.6   54/176      4      0      0     0
+G.Launcher  :    0.0    0/12       0      0      0     0
+R.Launcher  :    0.0    0/30       0      3      0     0
+LightningGun:    0.0    0/9        0      2      0     0
+Railgun     :   55.7   29/52       8      4      0     0
+Plasmagun   :                      0      1      0     0
+
+Damage Given: 3440   Armor Taken : 635 (8 YA, 2 RA)
+Damage Recvd: 3868   Health Taken: 575 (5 MH)
+
+Accuracy info for: ixsy
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+R.Launcher  :   30.7   16/52       4      0      0     0
+LightningGun:   44.6  207/464      4      1      0     0
+Railgun     :   59.4   22/37       5      6      0     0
+Plasmagun   :   33.3    5/15       1      0      0     0
+
+Damage Given: 5025   Armor Taken : 220 (4 YA)
+Damage Recvd: 3746   Health Taken: 115
+
+Accuracy info for: def
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+R.Launcher  :   23.5    4/17       0      0      0     0
+LightningGun:   29.3  127/433      0      7      0     0
+Railgun     :   40.0   16/40       2      5      0     0
+
+Damage Given: 2833   Armor Taken : 170 (1 YA, 1 RA)
+Damage Recvd: 3662   Health Taken: 100 (1 MH)
+
+Accuracy info for: HTF*Asuna
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+Shotgun     :                      0      2      0     0
+G.Launcher  :   14.2    1/7        0      0      0     0
+R.Launcher  :   19.6   13/66       1      1      0     0
+LightningGun:   36.7  200/544      7      3      0     0
+Railgun     :   31.2   10/32       2      2      0     0
+Plasmagun   :    0.0    0/24       0      0      0     0
+
+Damage Given: 3494   Armor Taken : 475 (1 YA, 4 RA)
+Damage Recvd: 2994   Health Taken: 195 (1 MH)
+
+Map: servitude
+Time Remaining: MATCH COMPLETE
+
+TEAM Player          Kll Thw Dth Sui TK WIN Eff    DG    DR   TD  Score
+-----------------------------------------------------------------------
+RED  HTF*Loki         12   2  10   0  0   4  58  3440  3868    0     14
+RED  CTPAHA*COBETOB    8   0  13   0  0   3  38  3418  4080    0      8
+RED  def               2   1  13   0  0   3  18  2833  3662    0      3
+-----------------------------------------------------------------------
+RED  Totals           22   3  36   0  0  10  10  9691 11610    0      4
+
+TEAM Player          Kll Thw Dth Sui TK WIN Eff    DG    DR   TD  Score
+-----------------------------------------------------------------------
+BLUE ixsy             15   0   7   0  0   9  68  5025  3746    0     15
+BLUE HTF*Asuna        10   2   8   0  0   6  60  3494  2994    0     12
+BLUE [420]chapo       11   0   7   0  0   7  61  3091  2951    0     11
+-----------------------------------------------------------------------
+BLUE Totals           36   2  22   0  0  22  31 11610  9691    0     10
+
+
+
+
+Current time: 15:30:03 (08 Nov 2020)
+
+Dumped console text to stats/2020.11.08/153003.txt.

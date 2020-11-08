@@ -4,10 +4,15 @@
   "description": "Discord and Telegram bot for Quake 3 Arena.",
   "main": "index.js",
   "dependencies": {
+    "@discordjs/opus": "^0.3.3",
     "as-table": "^1.0.55",
     "axios": "^0.20.0",
     "discord.js": "^12.4.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.7",
+    "node-gyp": "^7.1.2",
     "node-telegram-bot-api": "^0.50.0",
+    "pg": "^8.4.2",
     "turtler": "^1.1.1"
   },
   "devDependencies": {},
