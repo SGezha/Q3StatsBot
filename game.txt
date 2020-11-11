@@ -1,103 +1,156 @@
 
 
-Accuracy info for: CTPAHA*COBETOB
+Accuracy info for: charley chapln
 
 Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
 --------------------------------------------------------
-Shotgun     :   22.7    5/22       1      0      0     0
-R.Launcher  :   29.5   13/44       2      4      0     0
-LightningGun:   35.0  150/428      4      6      0     0
-Railgun     :   46.6   14/30       1      3      0     0
+G.Launcher  :   20.0    2/10       0      0      0     0
+R.Launcher  :   35.1   19/54       2      5      0     0
+LightningGun:   32.9  139/422      1      6      0     0
+Railgun     :   30.7    4/13       0      2      0     0
+Plasmagun   :    0.0    0/42       0      0      0     0
 
-Damage Given: 3418   Armor Taken : 125 (1 RA)
-Damage Recvd: 4080   Health Taken: 60
+Damage Given: 2556   Armor Taken : 240 (2 YA, 1 RA)
+Damage Recvd: 3673   Health Taken: 290 (1 MH)
 
-Accuracy info for: [420]chapo
-
-Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
---------------------------------------------------------
-Shotgun     :                      0      3      0     0
-G.Launcher  :    0.0    0/4        0      0      0     0
-R.Launcher  :   24.4   12/49       2      1      0     0
-LightningGun:   25.2   88/349      4      0      0     0
-Railgun     :   40.0   14/35       5      3      0     0
-
-Damage Given: 3091   Armor Taken : 480 (5 YA, 2 RA)
-Damage Recvd: 2951   Health Taken: 200 (1 MH)
-
-Accuracy info for: HTF*Loki
+Accuracy info for: yako
 
 Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
 --------------------------------------------------------
-Shotgun     :   30.6   54/176      4      0      0     0
 G.Launcher  :    0.0    0/12       0      0      0     0
-R.Launcher  :    0.0    0/30       0      3      0     0
-LightningGun:    0.0    0/9        0      2      0     0
-Railgun     :   55.7   29/52       8      4      0     0
+R.Launcher  :   34.2   24/70       6      3      0     0
+LightningGun:   28.2  187/662      3      1      0     0
+Railgun     :   63.6   14/22       7      2      0     0
+
+Damage Given: 4481   Armor Taken : 590 (5 YA, 2 RA)
+Damage Recvd: 3372   Health Taken: 445 (2 MH)
+
+Accuracy info for: AksoNIaneC
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+G.Launcher  :    2.1    1/46       0      0      0     0
+R.Launcher  :   21.7   33/152      3      1      0     0
+LightningGun:   20.4   89/436      4      2      0     0
+Railgun     :   20.0    1/5        0      1      0     0
+
+Damage Given: 2574   Armor Taken : 465 (4 YA, 2 RA)
+Damage Recvd: 2956   Health Taken: 450 (3 MH)
+
+Accuracy info for: Izzy
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+G.Launcher  :   14.2    1/7        0      0      0     0
+R.Launcher  :   27.7    5/18       0      3      0     0
+LightningGun:   24.2  174/719      2      5      0     0
+Railgun     :   40.6   13/32       3      4      0     0
+
+Damage Given: 2988   Armor Taken : 225 (3 YA)
+Damage Recvd: 3494   Health Taken: 160 (1 MH)
+
+Accuracy info for: [PAW]EVEREST
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+Shotgun     :   13.6    3/22       0      0      0     0
+G.Launcher  :    0.0    0/2        0      0      0     0
+R.Launcher  :   30.7   24/78       7      1      0     0
+LightningGun:   40.6  190/467      6      3      0     0
+Railgun     :   29.4   10/34       3      1      0     0
+
+Damage Given: 4039   Armor Taken : 320 (2 YA, 2 RA)
+Damage Recvd: 3002   Health Taken: 280
+
+Accuracy info for: wh
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+G.Launcher  :    6.2    1/16       0      0      0     0
+R.Launcher  :   46.4   58/125      4      3      0     0
+LightningGun:   31.5   85/269      4      5      0     0
+Railgun     :   22.2    2/9        1      1      0     0
 Plasmagun   :                      0      1      0     0
 
-Damage Given: 3440   Armor Taken : 635 (8 YA, 2 RA)
-Damage Recvd: 3868   Health Taken: 575 (5 MH)
+Damage Given: 3947   Armor Taken : 320 (2 YA, 2 RA)
+Damage Recvd: 3444   Health Taken: 10
 
-Accuracy info for: ixsy
-
-Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
---------------------------------------------------------
-R.Launcher  :   30.7   16/52       4      0      0     0
-LightningGun:   44.6  207/464      4      1      0     0
-Railgun     :   59.4   22/37       5      6      0     0
-Plasmagun   :   33.3    5/15       1      0      0     0
-
-Damage Given: 5025   Armor Taken : 220 (4 YA)
-Damage Recvd: 3746   Health Taken: 115
-
-Accuracy info for: def
+Accuracy info for: neko
 
 Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
 --------------------------------------------------------
-R.Launcher  :   23.5    4/17       0      0      0     0
-LightningGun:   29.3  127/433      0      7      0     0
-Railgun     :   40.0   16/40       2      5      0     0
+Shotgun     :   18.1    2/11       0      0      0     0
+G.Launcher  :    5.1    2/39       0      0      0     0
+R.Launcher  :   18.0   22/122      2      1      0     0
+LightningGun:   30.6  146/477      7      4      0     0
+Railgun     :   41.1    7/17       3      1      0     0
+Plasmagun   :   12.8    9/70       0      0      0     0
 
-Damage Given: 2833   Armor Taken : 170 (1 YA, 1 RA)
-Damage Recvd: 3662   Health Taken: 100 (1 MH)
+Damage Given: 3500   Armor Taken : 450 (1 YA, 4 RA)
+Damage Recvd: 2923   Health Taken: 335 (3 MH)
 
-Accuracy info for: HTF*Asuna
+Accuracy info for: Vyazemskiy_5-7
 
 Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
 --------------------------------------------------------
-Shotgun     :                      0      2      0     0
-G.Launcher  :   14.2    1/7        0      0      0     0
-R.Launcher  :   19.6   13/66       1      1      0     0
-LightningGun:   36.7  200/544      7      3      0     0
-Railgun     :   31.2   10/32       2      2      0     0
-Plasmagun   :    0.0    0/24       0      0      0     0
+G.Launcher  :    0.0    0/2        0      0      0     0
+R.Launcher  :   52.7   38/72       2      3      0     0
+LightningGun:   39.3  107/272      4      4      0     0
+Railgun     :   54.5   12/22       2      4      0     0
 
-Damage Given: 3494   Armor Taken : 475 (1 YA, 4 RA)
-Damage Recvd: 2994   Health Taken: 195 (1 MH)
+Damage Given: 3631   Armor Taken : 125 (2 YA)
+Damage Recvd: 3402   Health Taken: 215 (1 MH)
 
-Map: servitude
+Accuracy info for: Kolya agent
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+G.Launcher  :   40.0    6/15       0      0      0     0
+R.Launcher  :   18.3   13/71       1      2      0     0
+LightningGun:   27.4  130/473      4      4      0     0
+Railgun     :   34.6    9/26       2      1      0     0
+Plasmagun   :    6.0    2/33       1      0      0     0
+
+Damage Given: 3241   Armor Taken : 225 (2 YA, 1 RA)
+Damage Recvd: 2806   Health Taken: 100
+
+Accuracy info for: Mill
+
+Weapon        Accrcy Hits/Atts Kills Deaths Pickup Drops
+--------------------------------------------------------
+R.Launcher  :   30.0   12/40       0      5      0     0
+LightningGun:   18.9  110/580      3      4      0     0
+Railgun     :   23.8    5/21       0      4      0     0
+
+Damage Given: 1937   Armor Taken : 215 (3 YA)
+Damage Recvd: 3822   Health Taken: 200
+
+Map: oxodm15
 Time Remaining: MATCH COMPLETE
 
 TEAM Player          Kll Thw Dth Sui TK WIN Eff    DG    DR   TD  Score
 -----------------------------------------------------------------------
-RED  HTF*Loki         12   2  10   0  0   4  58  3440  3868    0     14
-RED  CTPAHA*COBETOB    8   0  13   0  0   3  38  3418  4080    0      8
-RED  def               2   1  13   0  0   3  18  2833  3662    0      3
+RED  Vyazemskiy_5-7    8   1  11   0  0   1  45  3631  3402    0      9
+RED  wh                9   2  10   3  0   2  44  3947  3444    0      8
+RED  Izzy              5   2  12   0  0   2  36  2988  3494    0      7
+RED  charley chapln    3   1  13   0  0   0  23  2556  3673    0      4
+RED  Mill              3   1  13   0  0   1  23  1937  3822    0      4
 -----------------------------------------------------------------------
-RED  Totals           22   3  36   0  0  10  10  9691 11610    0      4
+RED  Totals           28   7  59   3  0   6   3 15059 17835    0      2
 
 TEAM Player          Kll Thw Dth Sui TK WIN Eff    DG    DR   TD  Score
 -----------------------------------------------------------------------
-BLUE ixsy             15   0   7   0  0   9  68  5025  3746    0     15
-BLUE HTF*Asuna        10   2   8   0  0   6  60  3494  2994    0     12
-BLUE [420]chapo       11   0   7   0  0   7  61  3091  2951    0     11
+BLUE yako             16   2   6   0  0   7  75  4481  3372    0     18
+BLUE [PAW]EVEREST     16   1   5   1  0  10  76  4039  3002    0     16
+BLUE neko             12   3   6   0  0   8  71  3500  2923    0     15
+BLUE AksoNIaneC        7   3   4   0  0   8  71  2574  2956    0     10
+BLUE Kolya agent       8   0   7   0  0   8  53  3241  2806    0      8
 -----------------------------------------------------------------------
-BLUE Totals           36   2  22   0  0  22  31 11610  9691    0     10
+BLUE Totals           59   9  28   1  0  41  26 17835 15059    0     10
 
 
 
 
-Current time: 15:30:03 (08 Nov 2020)
+Current time: 00:05:00 (09 Nov 2020)
 
-Dumped console text to stats/2020.11.08/153003.txt.
+Dumped console text to stats/2020.11.09/000501.txt.
