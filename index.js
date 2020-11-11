@@ -635,9 +635,9 @@ client.on("message", async message => {
     }
 
 
-    if(message.content.indexOf("/") == -1 && message.content.indexOf("\\") == -1) return;
+    if(message.content.indexOf("/") == -1 && message.content.indexOf("\\") == -1 && message.content.indexOf(".") == -1 && message.content.indexOf("!") == -1) return;
 
-    command = command.split("/").join("").split("\\").join("")
+    command = command.split("/").join("").split("\\").join("").split("!").join("").split(".").join("")
 
     if (command == "who" || command == "w" || command == "кто") {
         if (message.channel.id != 755686789414649906) return;
@@ -671,7 +671,7 @@ client.on("message", async message => {
 
     }
 
-    if (command == "maps" || command == "карты" || command == "ьфзы" || command == ".ьфзы") {
+    if (command == "maps" || command == "карты" || command == "ьфзы") {
         if (message.channel.id != 755686789414649906) return;
         const s = await message.channel.send("Loading pickups...");
         let pickupsMas = [];
@@ -820,7 +820,7 @@ client.on("message", async message => {
         message.channel.send(`Register completed.`);
     }
 
-    if (command === "profile" || command === "p" || command == "з" || command == ".з") {
+    if (command === "profile" || command === "p" || command == "з") {
         const m = await message.channel.send(`Loading profile...`);
         try {
             const res = message.content.split(" ")[1] == undefined ? await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.author.id]) : await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.mentions.users.first().id])
