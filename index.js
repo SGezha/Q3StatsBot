@@ -13,7 +13,7 @@ const Discord = require("discord.js"),
         password: '1379',
         port: 5432,
     }),
-    bans = "lagz-sr, p",
+    bans = "lagz-sr, p, anus, BornToLose, Roadto800elo, TaksaDudel, +WWWWWWWWWWWWWWW, klavz xuyavz",
     bot = new TelegramBot(`1278792395:AAHk8mFilPMfV70UQXg4RNGXwxdZxBgbyQ4`, { polling: true }),
     admins = "149521299562037249";
 
@@ -337,7 +337,7 @@ Plasmagun: ${findTopWeapons("Plasmagun", profile.nick).acc}% [#${findTopWeapons(
 //discord
 client.on("ready", async () => {
     console.log(`Bot has started.`);
-    client.user.setActivity(`Author: SGezha`);
+    client.user.setActivity(`pickup.xq3e.ru`);
     let temp = await bd.query(`SELECT * FROM "public"."matches" ORDER BY "id" DESC`);
     All_games = temp.rows;
     all_pl = await bd.query(`SELECT * FROM "players"`);
@@ -687,6 +687,40 @@ client.on("message", async message => {
         }
     }
 
+    if (command === "\\expire" || command === "/expire" || command == "\\e" || command == "/e" || command == "\\у" || command == "у") {
+        if (message.channel.id != 755686789414649906) return;
+        try {
+            let pickupsMas = [];
+            let time = message.content.split(" ")[1] ? message.content.split(" ")[1] : 10;
+            let pl = await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.author.id]);
+            pickups.forEach(async (p, ind) => {
+                let list = [];
+                let mode = p.mode.split(" ")[2];
+
+                if (p.players.find(a => a.nick == pl.rows[0].nick) != undefined) {
+                    setTimeout(() => {
+                        p.players = p.players.filter(a => a.discord_id != message.author.id);
+                    }, time*1000*60)
+                }
+
+                if (p.players.length == 0) return;
+
+                p.players.sort((a, b) => +a.elo - +b.elo).reverse().forEach(async i => {
+                    list.push("**`" + `${i.nick} (${i.elo})` + "`**");
+                })
+
+
+            })
+            setTimeout(() => {
+                message.channel.send(`<@!${message.author.id}>, you have been removed from all pickups as your !expire time ran off...`)
+            }, time*1000*60)
+            message.channel.send(`You will be removed in ${time}m.`)
+        } catch (er) {
+            console.log(er);
+        }
+    }
+
+
     if (command === "\\ping" || command === "/ping" || command == "\\пинг" || command == "/пинг" || command == "\\зштп" || command == ".зштп") {
         const m = await message.channel.send("Ping?");
         m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms.`);
@@ -717,7 +751,7 @@ client.on("message", async message => {
                             allPlayers.find((a) => a.info.nick == p.nick).info.kills += p.kills;
                             allPlayers.find((a) => a.info.nick == p.nick).info.deaths += p.deaths;
                             allPlayers.find((a) => a.info.nick == p.nick).thw += p.thw;
-                            allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 50 : -50;
+                            allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 15 : -15;
                         } else {
                             allPlayers.push({ thw: p.thw, id: 0, score: score, games: 1, map: "", gameWin: false, elo: 1000, info: p, damage: [p.damageGiven] });
                             allPlayers.find((a) => a.info.nick == p.nick).info.kills = p.kills;
@@ -928,7 +962,7 @@ THW Game : ${elo.info.thwAVG.toFixed(2).split(".").join(",")}  (min: ${elo.info.
                         if (num == 3) medal = "🥉";
                         resultText.push({
                             name: `${medal} ${p.info.nick}`,
-                            value: `DMG Round: ` + "`" + `${p.damageAVGRound}` + "`" + `\nDMG Game: ` + "`" + `${p.damageAVG}` + "`" + `\nKills: ` + "`" + `${p.info.kills}` + "`" + `\tDeaths: ` + "`" + `${p.info.deaths}` + "`",
+                            value: `DMG Round: ` + "`" + `${p.damageAVGRound}` + "`" + `\nDMG Game: ` + "`" + `${p.damageAVG}` + "`",
                             inline: true
                         })
                         num++;
@@ -1609,7 +1643,7 @@ function findTopElo(nick, mode) {
                 allPlayers.find((a) => a.info.nick == p.nick).info.deaths += +p.deaths;
                 allPlayers.find((a) => a.info.nick == p.nick).thw += p.thw;
                 allPlayers.find((a) => a.info.nick == p.nick).thwMas.push(p.thw);
-                allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 50 : -50;
+                allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 15 : -15;
                 allPlayers.find((a) => a.info.nick == p.nick).win += p.gameWin == true ? 1 : 0;
                 allPlayers.find((a) => a.info.nick == p.nick).lose += p.gameWin == true ? 0 : 1;
             } else {
@@ -1641,7 +1675,7 @@ function findTopElo(nick, mode) {
         if (a.eloAVG == b.eloAVG) return 0;
         if (a.eloAVG < b.eloAVG) return 1;
     })
-    return { info: allPlayers.find((a) => a.info.nick == nick) ? allPlayers.find((a) => a.info.nick == nick) : {min: 0, max: 0, win: 0, lose: 0, thwMas: [0], thw: 0, score: 0, thwAVG: 0, games: 1, elo: 1000, damage: [0]}, id: allPlayers.findIndex((a) => a.info.nick == nick) + 1, elo: allPlayers.find((a) => a.info.nick == nick) ? allPlayers.find((a) => a.info.nick == nick).eloAVG : 0 };
+    return { info: allPlayers.find((a) => a.info.nick == nick) ? allPlayers.find((a) => a.info.nick == nick) : { min: 0, max: 0, win: 0, lose: 0, thwMas: [0], thw: 0, score: 0, thwAVG: 0, games: 1, elo: 1000, damage: [0] }, id: allPlayers.findIndex((a) => a.info.nick == nick) + 1, elo: allPlayers.find((a) => a.info.nick == nick) ? allPlayers.find((a) => a.info.nick == nick).eloAVG : 0 };
 }
 
 function findTopWeapons(weapons, nick) {
@@ -1764,7 +1798,7 @@ function listTopElo() {
                 allPlayers.find((a) => a.info.nick == p.nick).info.kills += +p.kills;
                 allPlayers.find((a) => a.info.nick == p.nick).info.deaths += +p.deaths;
                 allPlayers.find((a) => a.info.nick == p.nick).thw += p.thw;
-                allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 50 : -50;
+                allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 15 : -15;
             } else {
                 allPlayers.push({ thw: p.thw, score: score, games: 1, elo: 1000, info: p, damage: [p.damageGiven] });
                 allPlayers.find((a) => a.info.nick == p.nick).info.kills = p.kills;
@@ -1806,7 +1840,7 @@ function getRecent() {
                 allPlayers.find((a) => a.info.nick == p.nick).info.kills += p.kills;
                 allPlayers.find((a) => a.info.nick == p.nick).info.deaths += p.deaths;
                 allPlayers.find((a) => a.info.nick == p.nick).thw += p.thw;
-                allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 50 : -50;
+                allPlayers.find((a) => a.info.nick == p.nick).elo += p.gameWin == true ? 15 : -15;
             } else {
                 allPlayers.push({ thw: p.thw, score: score, games: 1, gamesMass: [{ data: data, id: f.id }], elo: 1000, info: p, damage: [p.damageGiven] });
             }
