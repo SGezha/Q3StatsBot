@@ -558,59 +558,6 @@ client.on("message", async message => {
         }
     }
 
-    if (command.indexOf("\\who") > -1 || command === "/who" || command === "\\w" || command === "/w" || command == "\\кто" || command == "/кто") {
-        if (message.channel.id != 755686789414649906) return;
-        const s = await message.channel.send("Loading pickups...");
-        let pickupsMas = [];
-        pickups.forEach(async (p, ind) => {
-            let list = [];
-
-            if (p.players.length == 0) return;
-
-            p.players.sort((a, b) => +a.elo - +b.elo).reverse().forEach(async i => {
-                list.push("**`" + `${i.nick} (${i.elo})` + "`**");
-            })
-
-
-            if (list.toString().split(",").join("\n") != "") {
-                pickupsMas.push({
-                    name: `${p.mode} [${p.players.length}/${p.need}]`,
-                    value: list.toString().split(",").join("\n").length > 0 ? list.toString().split(",").join("\n") : "No one",
-                    inline: true
-                })
-            }
-        })
-
-        const embed = {
-            "title": `PickUps:`,
-            "color": randColor(),
-            "fields": pickupsMas
-        }
-        s.edit(``, { embed: embed })
-
-    }
-
-    if (command.indexOf("\\maps") > -1 || command === "/maps" || command == "\\карты" || command == "/карты" || command == "\\ьфзы" || command == ".ьфзы") {
-        if (message.channel.id != 755686789414649906) return;
-        const s = await message.channel.send("Loading pickups...");
-        let pickupsMas = [];
-        pickups.forEach((p, ind) => {
-            pickupsMas.push({
-                name: `${p.mode} [${p.players.length}/${p.need}]`,
-                value: `**${p.maps.toString().split(",").join("\n")}**`,
-                inline: true
-            })
-        })
-
-        const embed = {
-            "title": `PickUps:`,
-            "color": randColor(),
-            "fields": pickupsMas
-        }
-        s.edit(``, { embed: embed })
-
-    }
-
     if (command == "--") {
         let pickupsMas = [];
         let pl = await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.author.id]);
@@ -687,7 +634,66 @@ client.on("message", async message => {
         }
     }
 
-    if (command === "\\expire" || command === "/expire" || command == "\\e" || command == "/e" || command == "\\у" || command == "у") {
+
+    if(message.content.indexOf("/") == -1 && message.content.indexOf("\\") == -1) return;
+
+    command = command.split("/").join("").split("\\").join("")
+
+    if (command == "who" || command == "w" || command == "кто") {
+        if (message.channel.id != 755686789414649906) return;
+        const s = await message.channel.send("Loading pickups...");
+        let pickupsMas = [];
+        pickups.forEach(async (p, ind) => {
+            let list = [];
+
+            if (p.players.length == 0) return;
+
+            p.players.sort((a, b) => +a.elo - +b.elo).reverse().forEach(async i => {
+                list.push("**`" + `${i.nick} (${i.elo})` + "`**");
+            })
+
+
+            if (list.toString().split(",").join("\n") != "") {
+                pickupsMas.push({
+                    name: `${p.mode} [${p.players.length}/${p.need}]`,
+                    value: list.toString().split(",").join("\n").length > 0 ? list.toString().split(",").join("\n") : "No one",
+                    inline: true
+                })
+            }
+        })
+
+        const embed = {
+            "title": `PickUps:`,
+            "color": randColor(),
+            "fields": pickupsMas
+        }
+        s.edit(``, { embed: embed })
+
+    }
+
+    if (command == "maps" || command == "карты" || command == "ьфзы" || command == ".ьфзы") {
+        if (message.channel.id != 755686789414649906) return;
+        const s = await message.channel.send("Loading pickups...");
+        let pickupsMas = [];
+        pickups.forEach((p, ind) => {
+            pickupsMas.push({
+                name: `${p.mode} [${p.players.length}/${p.need}]`,
+                value: `**${p.maps.toString().split(",").join("\n")}**`,
+                inline: true
+            })
+        })
+
+        const embed = {
+            "title": `PickUps:`,
+            "color": randColor(),
+            "fields": pickupsMas
+        }
+        s.edit(``, { embed: embed })
+
+    }
+
+
+    if (command === "expire" || command == "e" || command == "у") {
         if (message.channel.id != 755686789414649906) return;
         try {
             let pickupsMas = [];
@@ -700,7 +706,7 @@ client.on("message", async message => {
                 if (p.players.find(a => a.nick == pl.rows[0].nick) != undefined) {
                     setTimeout(() => {
                         p.players = p.players.filter(a => a.discord_id != message.author.id);
-                    }, time*1000*60)
+                    }, time * 1000 * 60)
                 }
 
                 if (p.players.length == 0) return;
@@ -713,7 +719,7 @@ client.on("message", async message => {
             })
             setTimeout(() => {
                 message.channel.send(`<@!${message.author.id}>, you have been removed from all pickups as your !expire time ran off...`)
-            }, time*1000*60)
+            }, time * 1000 * 60)
             message.channel.send(`You will be removed in ${time}m.`)
         } catch (er) {
             console.log(er);
@@ -721,12 +727,12 @@ client.on("message", async message => {
     }
 
 
-    if (command === "\\ping" || command === "/ping" || command == "\\пинг" || command == "/пинг" || command == "\\зштп" || command == ".зштп") {
+    if (command === "ping") {
         const m = await message.channel.send("Ping?");
         m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms.`);
     }
 
-    if (command === "\\recent" || command === "\\r" || command === "/r" || command === "/recent" || command == "\\к" || command == "/кусуте" || command == "\\последние" || command == ".последние") {
+    if (command === "recent" || command === "r" || command == "к" || command == "кусуте") {
         const m = await message.channel.send("Loading...");
         let allPlayers = await getRecent();
         const res = message.content.split(" ")[1] == undefined ? await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.author.id]) : await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.mentions.users.first().id])
@@ -808,13 +814,13 @@ client.on("message", async message => {
         }
     }
 
-    if (command === "\\register" || command === "/register" || command == "\\регистрация" || command == "/регистрация" || command == "\\купшыеук" || command == ".купшыеук") {
+    if (command === "register") {
         if (m.split(" ")[1] == undefined) return message.channel.send("Type nick!!! Example: `/register Asuna`")
         register(message.author.id, m.split(" ")[1])
         message.channel.send(`Register completed.`);
     }
 
-    if (command === "\\profile" || command === "\\p" || command === "/p" || command === "/profile" || command == "\\п" || command == "\\профиль" || command == "/профиль" || command == "/п" || command == "\\з" || command == ".з") {
+    if (command === "profile" || command === "p" || command == "з" || command == ".з") {
         const m = await message.channel.send(`Loading profile...`);
         try {
             const res = message.content.split(" ")[1] == undefined ? await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.author.id]) : await bd.query(`SELECT * FROM "players" WHERE discord_id = $1`, [message.mentions.users.first().id])
@@ -905,7 +911,7 @@ THW Game : ${elo.info.thwAVG.toFixed(2).split(".").join(",")}  (min: ${elo.info.
         }
     }
 
-    if (command === "/help") {
+    if (command === "help") {
         message.channel.send(`
         /stats (s) [id] - отобразить статистику игры 
 /profile (p) [nick] - профиль игрока
@@ -915,7 +921,7 @@ THW Game : ${elo.info.thwAVG.toFixed(2).split(".").join(",")}  (min: ${elo.info.
         `);
     }
 
-    if (command === "\\history" || command === "\\h" || command === "/history" || command === "/h" || command == "\\и" || command == "\\история" || command == "/история" || command == ".и" || command == "\\р" || command == ".ршыещкн") {
+    if (command === "history" || command === "h") {
         let page = message.content.split(" ")[1] != undefined ? +message.content.split(" ")[1] - 1 : 0;
         let info = [
             ["ID", "DATE", "MAP", "SCORE"],
@@ -940,7 +946,7 @@ THW Game : ${elo.info.thwAVG.toFixed(2).split(".").join(",")}  (min: ${elo.info.
         }
     }
 
-    if (command === "\\top" || command === "\\t" || command === "/t" || command === "/top" || command == "\\т" || command == "\\топ" || command == "/топ" || command == ".т" || command == "\\ещз" || command == ".ещз") {
+    if (command === "top" || command === "t") {
         let cmd = message.content.split(" ")[1] ? message.content.split(" ")[1].toLowerCase() : "";
         let page = message.content.split(" ")[2] != undefined ? +message.content.split(" ")[2] - 1 : 0;
         if (cmd && (cmd == "dmg" || getWeapName(cmd).name != "-")) {
@@ -1056,7 +1062,7 @@ THW Game : ${elo.info.thwAVG.toFixed(2).split(".").join(",")}  (min: ${elo.info.
         }
     }
 
-    if (command === "\\stats" || command === "\\s" || command === "/s" || command === "/stats" || command == "\\статистика" || command == "\\с" || command == "/статистика" || command == ".с" || command == "\\ыефеы" || command == ".ыефеы") {
+    if (command === "stats" || command === "s") {
         if (message.content.split(" ")[1] != undefined) {
             let data = All_games.find(a => a.id == +message.content.split(" ")[1]).json;
 
